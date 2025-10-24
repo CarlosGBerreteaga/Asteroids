@@ -15,7 +15,10 @@ def main():
 
     while not exit_game:
         screen.fill((0, 0, 0))  # Clear screen with black
+
+        player.update(dt)
         player.draw(screen)
+        
         pygame.display.flip()  # Update the full display Surface to the screen
 
         for event in pygame.event.get():
